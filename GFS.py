@@ -56,14 +56,14 @@ def download_gfs(date, iii):
     
     # Create the URL's based on the resolution    
     if (resolution == '25'):  
-        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p'+resolution+'.pl?file=gfs.t'+hour_run+'z.pgrb2.0p'+resolution+'.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='+min_lon+'&rightlon='+max_lon+'&toplat='+max_lat+'&bottomlat='+min_lat+'&dir=%2Fgfs.'+date+'%2F00%2Fatmos' 
-        file_name = 'gfs.t'+hour_run+'z.pgrb2.0p'+resolution+'.f'+str(hour).zfill(3)
+        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p'{resolution}'.pl?file=gfs.t'{hour_run}'z.pgrb2.0p'{resolution}'.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='{min_lon}'&rightlon='{max_lon}'&toplat='{max_lat}'&bottomlat='{min_lat}'&dir=%2Fgfs.'{date}'%2F00%2Fatmos' 
+        file_name = 'gfs.t'{hour_run}'z.pgrb2.0p'{resolution}'.f'+str(hour).zfill(3)
     elif (resolution == '50'):
-        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p'+resolution+'.pl?file=gfs.t'+hour_run+'z.pgrb2full.0p'+resolution+'.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='+min_lon+'&rightlon='+max_lon+'&toplat='+max_lat+'&bottomlat='+min_lat+'&dir=%2Fgfs.'+date+'%2F00%2Fatmos' 
-        file_name = 'gfs.t'+hour_run+'z.pgrb2.0p'+resolution+'.f'+str(hour).zfill(3)
+        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p'{resolution}'.pl?file=gfs.t'{hour_run}'z.pgrb2full.0p'{resolution}'.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='{min_lon}'&rightlon='{max_lon}'&toplat='{max_lat}'&bottomlat='{min_lat}'&dir=%2Fgfs.'{date}'%2F00%2Fatmos' 
+        file_name = 'gfs.t'{hour_run}'z.pgrb2.0p'{resolution}'.f'+str(hour).zfill(3)
     elif (resolution == '1'):
-        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_'+resolution+'p00.pl?file=gfs.t'+hour_run+'z.pgrb2.'+resolution+'p00.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='+min_lon+'&rightlon='+max_lon+'&toplat='+max_lat+'&bottomlat='+min_lat+'&dir=%2Fgfs.'+date+'%2F00%2Fatmos' 
-        file_name = 'gfs.t'+hour_run+'z.pgrb2.'+resolution+'p00.f'+str(hour).zfill(3)
+        url = 'https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_'{resolution}'p00.pl?file=gfs.t'{hour_run}'z.pgrb2.'{resolution}'p00.f'+str(hour).zfill(3)+'&all_lev=on&all_var=on&subregion=&leftlon='{min_lon}'&rightlon='{max_lon}'&toplat='{max_lat}'&bottomlat='{min_lat}'&dir=%2Fgfs.'{date}'%2F00%2Fatmos' 
+        file_name = 'gfs.t'{hour_run}'z.pgrb2.'{resolution}'p00.f'+str(hour).zfill(3)
     
     # Print the file name
     print("File name: ", file_name)
